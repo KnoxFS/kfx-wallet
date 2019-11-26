@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=KnoxFS
+Comment=KnoxFS P2P Cryptocurrency
+Exec=kfx-qt %u
+Terminal=false
+Type=Application
+Icon=kfx128
+MimeType=x-scheme-handler/kfx;
+Categories=Office;Finance;
+Name[ru]=kfx-qt.desktop.desktop
