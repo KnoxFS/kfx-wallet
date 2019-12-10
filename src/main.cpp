@@ -1588,7 +1588,7 @@ CAmount GetBlockValue(int nHeight)
     int64_t nSubsidy = 0;
 
     if ( nHeight == 2 ) {
-      nSubsidy = 42250000 * COIN;
+      nSubsidy = 545050000 * COIN;
     } else {
       nSubsidy = 40 * COIN;
     } 
