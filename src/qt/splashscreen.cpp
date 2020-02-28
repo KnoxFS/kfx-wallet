@@ -42,7 +42,8 @@ SplashScreen::SplashScreen(Qt::WindowFlags f, const NetworkStyle* networkStyle) 
     QString copyrightTextBtc = QChar(0xA9) + QString(" 2009-2014 ").arg(COPYRIGHT_YEAR) + QString(tr("The Bitcoin Core developers"));
     QString copyrightTextDash = QChar(0xA9) + QString(" 2014-2015 ").arg(COPYRIGHT_YEAR) + QString(tr("The Dash Core developers"));
     QString copyrightTextPIVX = QChar(0xA9) + QString(" 2015-2017 ").arg(COPYRIGHT_YEAR) + QString(tr("The PIVX Core developers"));
-    QString copyrightTextKnoxFS = QChar(0xA9) + QString(" 2018-2019 ").arg(COPYRIGHT_YEAR) + QString(tr("The Livenodes developers"));
+    QString copyrightTextLivenodes = QChar(0xA9) + QString(" 2018-2019 ").arg(COPYRIGHT_YEAR) + QString(tr("The Livenodes developers"));
+    QString copyrightTextKnoxFS = QChar(0xA9) + QString(" 2020 ").arg(COPYRIGHT_YEAR) + QString(tr("The KnoxFS developers"));
     QString titleAddText = networkStyle->getTitleAddText();
 
     QString font = QApplication::font().toString();
@@ -52,7 +53,7 @@ SplashScreen::SplashScreen(Qt::WindowFlags f, const NetworkStyle* networkStyle) 
     pixmap = networkStyle->getSplashImage();
   
     QPainter pixPaint(&pixmap);
-    pixPaint.setPen(QColor(255, 255, 255));
+    pixPaint.setPen(QColor(1, 107, 182));
 
     // check font size and drawing with
     pixPaint.setFont(QFont(font, 28 * fontFactor));
@@ -76,7 +77,8 @@ SplashScreen::SplashScreen(Qt::WindowFlags f, const NetworkStyle* networkStyle) 
     pixPaint.drawText(paddingLeft, paddingTop + titleCopyrightVSpace, copyrightTextBtc);
     pixPaint.drawText(paddingLeft, paddingTop + titleCopyrightVSpace + 12, copyrightTextDash);
     pixPaint.drawText(paddingLeft, paddingTop + titleCopyrightVSpace + 24, copyrightTextPIVX);
-    pixPaint.drawText(paddingLeft, paddingTop + titleCopyrightVSpace + 36, copyrightTextKnoxFS);
+    pixPaint.drawText(paddingLeft, paddingTop + titleCopyrightVSpace + 36, copyrightTextLivenodes);
+    pixPaint.drawText(paddingLeft, paddingTop + titleCopyrightVSpace + 48, copyrightTextKnoxFS);
 
     // draw additional text if special network
     if (!titleAddText.isEmpty()) {
