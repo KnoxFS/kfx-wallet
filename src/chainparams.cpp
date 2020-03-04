@@ -80,10 +80,10 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0x0b;
-        pchMessageStart[1] = 0x39;
-        pchMessageStart[2] = 0x7a;
-        pchMessageStart[3] = 0xdd;
+        pchMessageStart[0] = 0x4e;
+        pchMessageStart[1] = 0xd1;
+        pchMessageStart[2] = 0xe4;
+        pchMessageStart[3] = 0xa6;
         vAlertPubKey = ParseHex("044886172e4635ab5a74863bfccbf19c7a424619448d9622ddbc970c71c085c379be8c37a7fe6ceae3dc75b7366adc1aaabd8135369e3f4f740d3270aee6be6bc7");
 
         nDefaultPort = 19328;
@@ -138,14 +138,14 @@ public:
 
         vSeeds.push_back(CDNSSeedData("seeds.knoxfs.com","seeds.knoxfs.com"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 45); // K
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 35); // F
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 75); // X
-
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 23);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 83);
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 151);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x02)(0x2D)(0x25)(0x33).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x02)(0x21)(0x31)(0x2B).convert_to_container<std::vector<unsigned char> >();
         //      BIP44 coin type is from https://github.com/satoshilabs/slips/blob/master/slip-0044.md
-        base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x27)(0x00).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x77).convert_to_container<std::vector<unsigned char> >();
+
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
         fRequireRPCPassword = true;
