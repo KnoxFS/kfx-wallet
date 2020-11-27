@@ -137,7 +137,9 @@ public:
         assert(genesis.hashMerkleRoot == uint256("0x0236fb4ad7c3ff9b20b26f572bcf05338c0382f01e73063f5eceecdc2fca66b6"));
 
         vSeeds.push_back(CDNSSeedData("seeds.knoxfs.com","seeds.knoxfs.com"));
-
+        
+        // Keeping track base58 chain transition?
+    
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 23);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 83);
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 151);
